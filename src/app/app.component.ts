@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
     'Search filter using .includes() method, means any match in any part of the string is valid;',
     'Search filter is note CaSeSensitive;',
     'Search filter using RxJS debounceTime which would be useful to reduce API calls if the search directly hit backend API;',
-    'Codes tested with Jasmine/Karma with Code Coverage 86.56% (58/67 statements), 86.2% (50/58 lines);',
+    'Codes tested with Jasmine/Karma with Code Coverage 86.95% (60/69 statements), 86.66% (52/60 lines);',
     'Submit Selection button can be customized to call an API, either to persist data to backend, email, or anything.'
   ]
 
@@ -44,6 +44,8 @@ export class AppComponent implements OnInit {
         error: (err: Error) => console.error(err)
       })
     );
+    console.log(result);
+    this.api.selected$.next([]);
     console.log(result);
     return result;
   }
