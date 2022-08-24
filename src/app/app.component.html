@@ -21,4 +21,16 @@
 <div class="content">
   <app-search-field></app-search-field>
   <app-list></app-list>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="onSubmit()">
+      Submit Selection
+  </button>
+</div>
+
+<div class="content">
+  <ul> Project Note:
+    <li *ngFor="let step of projectNote">{{step}}</li>
+  </ul>
 </div>

@@ -17,3 +17,8 @@ mat-icon {
 mat-chips {
     padding: 1rem;
 }
+
+app-list {
+    display: flex;
+    justify-content: center;
+}

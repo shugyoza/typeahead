@@ -28,4 +28,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('the at-home Runner typeahead exercise');
   });
 
+  it('onSubmit() takes the array of selected movies meant for any API call', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    let result = app.onSubmit();
+    expect(Array.isArray(result)).toBeTrue();
+  })
 });
