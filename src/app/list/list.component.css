@@ -1,0 +1,19 @@
+.ng-star-inserted {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+mat-icon {
+    color: red
+}
+
+mat-chips {
+    padding: 1rem;
+}

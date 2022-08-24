@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from './api-service/api.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   pageTitle = 'by Sony Pictures Entertainment';
   title = 'the at-home Runner typeahead exercise';
   requirements = [
@@ -16,4 +17,12 @@ export class AppComponent {
     'The selected titles should be removable.',
     'This mimics a form element in our application where users assign title metadata to assets, so if you would like to build something that replicates a form submission, feel free to come up with your own solution to how it "saves" the data.'
   ];
+
+  constructor(private api: ApiService) { }
+
+  ngOnInit(): void {
+    // fetch list of movies from 'backend'
+    this.api.fetchTitles();
+  }
+
 }

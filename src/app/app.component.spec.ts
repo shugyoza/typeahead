@@ -27,4 +27,5 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.title).toEqual('the at-home Runner typeahead exercise');
   });
+
 });
